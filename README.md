@@ -8,7 +8,7 @@ description: We are glad that you are here!
 
 YETI is an L1 blockchain designed from the ground up to solve the current problems faced by existing blockchains. We have reimagined every aspect of the technology, from tokenomics to consensus, to create a fundamentally new distributed system.
 
-This documentation is the only reliable source of the Elysium architecture. We are still polishing the system's nuances, so the documentation is constantly updated and supplemented.
+This documentation is the only reliable source of the YETI architecture. We are still polishing the system's nuances, so the documentation is constantly updated and supplemented.
 
 In addition to the documentation, you can get more information about the project on the official [website](https://yetichain.com/) and [Twitter](https://twitter.com/yetichain).
 
