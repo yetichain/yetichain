@@ -1,6 +1,6 @@
 var postData = JSON.stringify({
-  orderDescription: '', 
-  orderId: 'Order4750',
+  orderDescription: '$BART', 
+  orderId: 'Order2007',
   merchantCustomDetails: {
     productId: "A78786X"
   },
@@ -13,7 +13,7 @@ const response = await fetch('https://api.remuno.com/v1/merchants/MA1074418WCA/t
     body: postData, 
     headers: {
         'Content-Type': 'application/json',
-        'x-api-key': '<ThisIsMyVeryLongRemunoApiKey>'
+        'x-api-key': 'UE4EP_uVm1o8a-Q86D85L5gH2w18AG5E-75EEVgqiaVa8Ag3j9-4wi5xoYrgMpi'
     }
 });
 
