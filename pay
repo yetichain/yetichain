@@ -1,37 +1,21 @@
-{
-  "id": "V2yX123BMawib1J_L_2T1",
-  "txnStatus": "pending",
-  "orderId": "Order0506",
-  "orderDescription": "",
-  "walletAddress": "0xc2119b5230C1811111111111135AA110d31111",
-  "fromFiat": "USD",
-  "toFiat": null,
-  "fromNetwork": null,
-  "fromCoin": null,
-  "toCoin": "BNB_BSC",
-  "toNetwork": "BNB_BSC",
-  "initialAmount": "100",
-  "adjustedInitialAmount": "104",
-  "receivedAmount": "0",
-  "merchantQuote": "0.3181745",
-  "merchantReceivedAmount": "0",
-  "quote": "0.3330121",
-  "quoteExpiresAt": "2023-04-13T15:24:50.856Z",
-  "paymentExpiresAt": "2023-04-13T15:39:50.856Z",
-  "paymentMarkupPercent": "4",
-  "minPaymentCompletePercent": "100",
-  "paymentExpiryPeriodSeconds": 1800,
-  "merchantCustomDetails": {
-    "productId": "A78786X"
+var postData = JSON.stringify({
+  orderDescription: '', 
+  orderId: 'Order4750',
+  merchantCustomDetails: {
+    productId: "A78786X"
   },
-  "keyName": "testest1",
-  "paymentStatus": "no_payment",
-  "nextPaymentStatus": "no_payment",
-  "settlementStatus": "not_settled",
-  "transactionType": "default",
-  "paymentNotificationUrl": "",
-  "previousWalletTransactionId": null,
-  "createdAt": "2023-04-13T15:09:50.857Z",
-  "updatedAt": "2023-04-13T15:09:50.857Z",
-  "sourceAddresses": []
-}
+  quoteToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcm9tRmlhdCI6IlVTRCIsInRvQ29pbiI6IkJOQl9CU0MiLCJhbW91bnQiOiIxIiwiYWRqdXN0ZWRBbW91bnQiOiIxIiwicXVvdGUiOiIwLjAwNDgwODciLCJleGNoYW5nZVJhdGUiOiIwLjAwNDIzMDgiLCJuZXR3b3JrRmVlc0ZpYXQiOiIwLjE0MTM4MTMiLCJuZXR3b3JrRmVlc0NvaW4iOiIwLjAwMDU3ODAiLCJub25jZSI6IjRlZWNiOGMwNGMwMThiMTYwZWQ3ZjlkOGU4YTFlYjczNzcxNjUxODkyYjAzZTMwNjA0NDZjMmQ4MTQzNTc2ODhmN2MzNzVmOWE1MWU1NmMxNTRkZmFmYjYzZThiNjU4NDdlZGY3ZDE3ZjE5YTBhZTdhYTgzM2FhOTU5OWU3MGE3OWZjZDkwYmJkM2UwZTQ0MGEyMWM5MTU2ZmE3ZjVmNDc1NGU3Mzg0ODNlYWY5NGRmMDZkYTRhZWM5ZTRlNjQ1NzJhZWVlOWQzYzJmZjdmYjI0ZDI0N2U5OGUwOGMwYWJiNjYxNDY1ZTgxMmFiZmRlOGEwNWQ3NTk1OTVhYjEzZmNhY2M1NTNkNjg4NTIzNjY0NTFkYWY2ZDBhODE3N2I0MThiM2UyNDllN2IwZjBiY2I0M2Q4ZTQ5NmM5ODFmZjUxODgyY2JmOWUzNTgyY2I1MGJjMDUxODNjY2JhNzM0MWE0ODNjNGY5MWEzNzZmMGM5MzlhMzRmZWMxYjAzNzAiLCJ0b05ldHdvcmsiOiJCTkJfQlNDIiwiaWF0IjoxNjcyMDA5MjYyLCJleHAiOjE2NzIwMTAxNjJ9.JR3HDvmtFA3smXvE-e39knhYOc11Qlk3KoNBC1LDfVQ'
+});
+
+const response = await fetch('https://api.remuno.com/v1/merchants/MA1074418WCA/txns', 
+{ 
+    method: 'POST',
+    body: postData, 
+    headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': '<ThisIsMyVeryLongRemunoApiKey>'
+    }
+});
+
+const data = await response.json();
+console.log(data);
