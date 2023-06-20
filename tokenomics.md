@@ -77,7 +77,8 @@ Also, we are pretty sure that it is impossible to create a single-coin tokenomic
 | Total Supply | 3,000,000,000      |
 | Transaction Fee    | 1% Buy tax (BUSD/USDT Reflections for YET Holders) 1% Sell tax (Marketing/Listing Expenses)<br /> |
 | Grinder Balancer | 1% Sell tax (80% BUSD/USDT Reflections for YET Holders, 20% Development/Listing Expenses)<br /> 1% Buy tax (80% Burn, 20% Development/Listing Expenses)|
-| Contract | [0xC631d214F68e5FD97Fe610736c6692C5533a2F20](https://bscscan.com/token/0xC631d214F68e5FD97Fe610736c6692C5533a2F20) |
+| Contract Binance | [0xC631d214F68e5FD97Fe610736c6692C5533a2F20](https://bscscan.com/token/0xC631d214F68e5FD97Fe610736c6692C5533a2F20) |
+| Contract Ethereun | [0xC631d214F68e5FD97Fe610736c6692C5533a2F20](https://etherscan.io/token/0xC631d214F68e5FD97Fe610736c6692C5533a2F20)) |
 
 ![YETI!](https://raw.githubusercontent.com/yetichain/yetichain/main/images/yet.png "YETI Chain")
 
