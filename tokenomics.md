@@ -78,7 +78,7 @@ Also, we are pretty sure that it is impossible to create a single-coin tokenomic
 
 ### YET Coin
 
-<table><thead><tr><th width="177">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Maximum Supply</td><td>100 000 000 YETs</td></tr><tr><td>Utility</td><td>YET is used to issue YETS</td></tr><tr><td>Issuance</td><td>Can be minted only as validator's reward</td></tr><tr><td>Burning</td><td>A part of YET while minting YETS is burned </td></tr></tbody></table>
+<table><thead><tr><th width="177">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Total Supply</td><td>3 000 000 000 YETs</td></tr><tr><td>Utility</td><td>YET is used to issue YETS</td></tr><tr><td>Issuance</td><td>Can be minted only as validator's reward</td></tr><tr><td>Burning</td><td>A part of YET while minting YETS is burned </td></tr></tbody></table>
 
 It is vital for investors and validators that there are explicit mechanics for the growth of the asset in the long run. But in most modern networks, it is not entirely obvious what a coin is secured with, so the main criteria for long-term investments remain the limited supply of the token and the possible popularity of the decentralized system in the future.
 
