@@ -52,6 +52,8 @@ Within standard single-coin tokenomics, it is impossible to balance the user cos
 
 ## YETI Tokenomics
 
+So YETI tokenomics uses two coins: YET and BUSD/USDT (YETS on YETI Network) Their supply is managed by YETI Grinder, which is essentially an automated central bank.
+
 It seems that it is almost impossible to make a consistent model of tokenomics on a single-coin basis - while using two coins makes it possible to resolve virtually all internal contradictions.
 
 In general, an ideal tokenomics should facilitate the coincidence of the interests of three groups of participants:&#x20;
@@ -65,6 +67,19 @@ The coincidence of interests is not just a theoretical concept. When applied to 
 Also, we are pretty sure that it is impossible to create a single-coin tokenomics model in which transaction growth results in gains for all participants, so YETI tokenomics uses two coins: YETS and YET. Their supply is managed by YETI Grinder, which is essentially an automated central bank.
 
 <figure><img src="../.gitbook/assets/YETI Tokenomics.png" alt=""><figcaption><p>YETI Tokenomics</p></figcaption></figure>
+
+### YET Coin Binance/Ethereum Token
+
+| Project Name | YETI Chain |
+| ----------- | ----------- |
+| Symbol    | $YET     |
+| Decimal  | 9         |
+| Total Supply | 3,000,000,000      |
+| Transaction Fee    | 1% Buy tax (BUSD/USDT Reflections for YET Holders) 1% Sell tax (Marketing/Listing Expenses)<br /> |
+| Grinder Balancer | 1% Sell tax (80% BUSD/USDT Reflections for YET Holders, 20% Development/Listing Expenses)<br /> 1% Buy tax (80% Burn, 20% Development/Listing Expenses)|
+| Contract | [0xC631d214F68e5FD97Fe610736c6692C5533a2F20](https://bscscan.com/token/0xC631d214F68e5FD97Fe610736c6692C5533a2F20) |
+
+![YETI!](https://raw.githubusercontent.com/yetichain/yetichain/main/images/yet.png "YETI Chain")
 
 ### YET Coin
 
