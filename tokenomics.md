@@ -76,94 +76,6 @@ Also, we are pretty sure that it is impossible to create a single-coin tokenomic
 
 <figure><img src="../.gitbook/assets/YETI Tokenomics.png" alt=""><figcaption><p>YETI Tokenomics</p></figcaption></figure>
 
-### YETS Coin
-
-<table><thead><tr><th width="194">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Maximum Supply</td><td>Unlimited</td></tr><tr><td>Circulating Supply</td><td>Limited by formula</td></tr><tr><td>Initial Supply</td><td>3 000 000 000 YETSs during the first 1000 days</td></tr><tr><td>Inflation</td><td>5% yearly after 1000 days</td></tr><tr><td>Utility</td><td>Transaction fees in YETI are paid in YETS</td></tr><tr><td>Issuance</td><td>Anyone can issue YETS by burning YET in the Grinder</td></tr><tr><td>Burning</td><td>All YETSs used to pay commissions are burned</td></tr></tbody></table>
-
-What matters most to blockchain users is that transaction fees do not become very expensive. In modern blockchains, the commission amount is determined on an auction basis - the more commission users pay, the faster their transaction will be processed. This leads to two problems: frontrunning and higher fees during activity spikes.&#x20;
-
-{% hint style="info" %}
-Frontrunning is the ability to outrun someone else's massive transaction by increasing the commission paid and earning from the resulting price increase.
-{% endhint %}
-
-In YETI, the YETS coin will be used to pay commissions. The maximum commission cost will be a fixed amount of 1 YETS, but with the growth of the network activity, the transaction cost will decrease - down to thousandths of a YETS. Moreover, because YETS is an inflationary coin with a 5% supply growth per year, its price will correlate with the real-world inflation rate in the long run.
-
-An activity expansion is usually accompanied by coin price growth. Thus, with the increase in network activity, the relative price of YETS will grow, but the absolute value of the transaction cost expressed in YETS will decrease. This will allow the fees to remain at an acceptable level relative to the real world even at the peak of the bull run.
-
-#### YETS Utility
-
-All transaction fees paid in YETS are immediately burned. The base fee rate per transaction is 1 YETS. But since the volume of transactions can be large, too many YETSs can be burned in a short period. Therefore, as the number of transactions increases, the fee is reduced so that no more than 1% of the total YETS supply is burned daily.
-
-{% tabs %}
-{% tab title="Chart" %}
-<figure><img src="../.gitbook/assets/Transaction fee.png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="Details" %}
-The formula defines the target fee cost in YETS depending on the total number of transactions. For the first 1000 days, the formula is:
-
-$$
-Fee=\frac{10^7}{10^7+TXN_{daily}}
-$$
-
-After 1000 days the formula changes to account for the YETS inflation:
-
-$$
-Fee=\frac{0.01\ast YETS_{supply}}{0.01\ast YETS_{supply}+TXN_{daily}}
-$$
-{% endtab %}
-{% endtabs %}
-
-#### YETS Issuance
-
-YETS can only be released into circulation by burning YET in the YETI Grinder. There is a queue of orders arranged by the YET / YETS rate for this purpose. The more YETs are offered in exchange for a single YETS, the sooner the Grinder will process that order. The closest analogy to such a queue is exchange limit sell orders, executed by persistent demand from the Grinder.
-
-{% tabs %}
-{% tab title="Chart" %}
-<figure><img src="../.gitbook/assets/YETS Issuance.png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="Details" %}
-The mathematical formula defines the YETS issuance depending on the day after the launch. For the first 1000 days, the formula is:
-
-$$
-YETS_{issuance}=52209083\cdot\frac{e^{-0.00591626\cdot day}}{\left(1+e^{-0.00591626\cdot day}\right)^{9.6}}
-$$
-
-After 1000 days the formula changes to keep the constant inflation rate:
-
-$$
-YETS_{issuance}=\frac{10^7}{73}\\
-$$
-
-These calculations apply only to newly created YETSs. Simultaneously with the issuance, YETSs will be minted through Grinder to replace the burned commission.
-{% endtab %}
-{% endtabs %}
-
-#### YETS Circulating Supply
-
-The YETI Grinder controls the issuance of the YETS coin to reach the target circulating supply determined by a mathematical formula. Since the YETS coin is inflationary and the commissions paid in YETS are burned, there is a constant need to create new YETSs. YETI Grinder will print YETSs providing the necessary issuance and replacing burned YETS coins to reach the target YETS circulating supply.
-
-{% tabs %}
-{% tab title="Chart" %}
-<figure><img src="../.gitbook/assets/YETS Supply.png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="Details" %}
-The mathematical formula defines the target supply depending on the day after the launch. For the first 1000 days, the formula is:
-
-$$
-YETS_{supply}=10^{9.0112}\cdot\left(1+e^{-0.0059162\cdot day}\right)^{-8.6}\;-\frac{10^{9.0112}}{2^{8.6}}
-$$
-
-After 1000 days the formula changes to keep the constant inflation rate:
-
-$$
-YETS_{supply}=\frac{10^7}{73}\cdot\left(day+6300\right)
-$$
-{% endtab %}
-{% endtabs %}
-
 ### YET Coin
 
 <table><thead><tr><th width="177">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Maximum Supply</td><td>100 000 000 YETs</td></tr><tr><td>Utility</td><td>YET is used to issue YETS</td></tr><tr><td>Issuance</td><td>Can be minted only as validator's reward</td></tr><tr><td>Burning</td><td>A part of YET while minting YETS is burned </td></tr></tbody></table>
@@ -252,8 +164,93 @@ The model assumes that the number of transactions grows from 0 to a given number
 {% endtab %}
 {% endtabs %}
 
-|   |
-| - |
+### YETS Coin
+
+<table><thead><tr><th width="194">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Maximum Supply</td><td>Unlimited</td></tr><tr><td>Circulating Supply</td><td>Limited by formula</td></tr><tr><td>Initial Supply</td><td>3 000 000 000 YETSs during the first 1000 days</td></tr><tr><td>Inflation</td><td>5% yearly after 1000 days</td></tr><tr><td>Utility</td><td>Transaction fees in YETI are paid in YETS</td></tr><tr><td>Issuance</td><td>Anyone can issue YETS by burning YET in the Grinder</td></tr><tr><td>Burning</td><td>All YETSs used to pay commissions are burned</td></tr></tbody></table>
+
+What matters most to blockchain users is that transaction fees do not become very expensive. In modern blockchains, the commission amount is determined on an auction basis - the more commission users pay, the faster their transaction will be processed. This leads to two problems: frontrunning and higher fees during activity spikes.&#x20;
+
+{% hint style="info" %}
+Frontrunning is the ability to outrun someone else's massive transaction by increasing the commission paid and earning from the resulting price increase.
+{% endhint %}
+
+In YETI, the YETS coin will be used to pay commissions. The maximum commission cost will be a fixed amount of 1 YETS, but with the growth of the network activity, the transaction cost will decrease - down to thousandths of a YETS. Moreover, because YETS is an inflationary coin with a 5% supply growth per year, its price will correlate with the real-world inflation rate in the long run.
+
+An activity expansion is usually accompanied by coin price growth. Thus, with the increase in network activity, the relative price of YETS will grow, but the absolute value of the transaction cost expressed in YETS will decrease. This will allow the fees to remain at an acceptable level relative to the real world even at the peak of the bull run.
+
+#### YETS Utility
+
+All transaction fees paid in YETS are immediately burned. The base fee rate per transaction is 1 YETS. But since the volume of transactions can be large, too many YETSs can be burned in a short period. Therefore, as the number of transactions increases, the fee is reduced so that no more than 1% of the total YETS supply is burned daily.
+
+{% tabs %}
+{% tab title="Chart" %}
+<figure><img src="../.gitbook/assets/Transaction fee.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="Details" %}
+The formula defines the target fee cost in YETS depending on the total number of transactions. For the first 1000 days, the formula is:
+
+$$
+Fee=\frac{10^7}{10^7+TXN_{daily}}
+$$
+
+After 1000 days the formula changes to account for the YETS inflation:
+
+$$
+Fee=\frac{0.01\ast YETS_{supply}}{0.01\ast YETS_{supply}+TXN_{daily}}
+$$
+{% endtab %}
+{% endtabs %}
+
+#### YETS Issuance
+
+YETS can only be released into circulation by burning YET in the YETI Grinder. There is a queue of orders arranged by the YET / YETS rate for this purpose. The more YETs are offered in exchange for a single YETS, the sooner the Grinder will process that order. The closest analogy to such a queue is exchange limit sell orders, executed by persistent demand from the Grinder.
+
+{% tabs %}
+{% tab title="Chart" %}
+<figure><img src="../.gitbook/assets/YETS Issuance.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="Details" %}
+The mathematical formula defines the YETS issuance depending on the day after the launch. For the first 1000 days, the formula is:
+
+$$
+YETS_{issuance}=52209083\cdot\frac{e^{-0.00591626\cdot day}}{\left(1+e^{-0.00591626\cdot day}\right)^{9.6}}
+$$
+
+After 1000 days the formula changes to keep the constant inflation rate:
+
+$$
+YETS_{issuance}=\frac{10^7}{73}\\
+$$
+
+These calculations apply only to newly created YETSs. Simultaneously with the issuance, YETSs will be minted through Grinder to replace the burned commission.
+{% endtab %}
+{% endtabs %}
+
+#### YETS Circulating Supply
+
+The YETI Grinder controls the issuance of the YETS coin to reach the target circulating supply determined by a mathematical formula. Since the YETS coin is inflationary and the commissions paid in YETS are burned, there is a constant need to create new YETSs. YETI Grinder will print YETSs providing the necessary issuance and replacing burned YETS coins to reach the target YETS circulating supply.
+
+{% tabs %}
+{% tab title="Chart" %}
+<figure><img src="../.gitbook/assets/YETS Supply.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="Details" %}
+The mathematical formula defines the target supply depending on the day after the launch. For the first 1000 days, the formula is:
+
+$$
+YETS_{supply}=10^{9.0112}\cdot\left(1+e^{-0.0059162\cdot day}\right)^{-8.6}\;-\frac{10^{9.0112}}{2^{8.6}}
+$$
+
+After 1000 days the formula changes to keep the constant inflation rate:
+
+$$
+YETS_{supply}=\frac{10^7}{73}\cdot\left(day+6300\right)
+$$
+{% endtab %}
+{% endtabs %}
 
 ## FAQ
 
